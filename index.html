@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="SoLaWi Kiste von Katari Farms - Ein landwirtschaftliches Projekt in Saarmund Nuthetal. Saison 2025 mit wöchentlichen Lieferungen frischer, saisonaler Gemüse.">
+    <meta name="keywords" content="Veggie Box, Gemüse, SoLawI,  Landwirtschaft, Saarmund Nuthetal, Belin, Saison 2025, Abonnement, wöchentliche Lieferung">
+    <meta name="author" content="SoLaWi Kiste">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags for social media -->
+    <meta property="og:title" content="Katari Farms SolaWi Kiste">
+    <meta property="og:description" content="Ein landwirtschaftliches Projekt in Saarmund Nuthetal. Saison 2025 mit wöchentlichen Lieferungen frischer, saisonaler Gemüse.">
+    <meta property="og:image" content="https://solawi.katari.farm/img/website-preview-image.png">
+    <meta property="og:url" content="https://solawi.katari.farm">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SoLaWi Kiste">
+    <meta name="twitter:description" content="Ein landwirtschaftliches Projekt in Saarmund Nuthetal, nahe Berlin. Saison 2025 mit wöchentlichen Lieferungen frischer, saisonaler Gemüse.">
+    <meta name="twitter:image" content="https://solawi.katari.farm/img/website-preview-image.png">
+    
+    <!-- Other Meta Tags -->
+    <link rel="canonical" href="https://solawi.katari.farm">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+
+    <title>SoLawI Veggie Box</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova&family=Bowlby+One&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+</head>
+<body class="bg-cover bg-fixed bg-center" style="background-image: url('{{ url_for('static', filename='img/field.png') }}');">
+    <header class="fixed-top bg-custom text-custom shadow-lg">
+        <div class="container d-flex align-items-center p-3">
+            <div class="d-flex align-items-center mr-3">
+                <div class="position-relative">
+                    <div class="bg-light rounded-circle" style="width: 30px; height: 30px; z-index: 2;"></div>
+                    <div class="border border-light rounded-circle position-absolute" style="width: 40px; height: 40px; top: -5px; left: -5px; z-index: 1;"></div>
+                </div>
+            </div>
+            <h1 class="font-bowlby mb-0">SoLaWi Kiste</h1>
+        </div>
+    </header>
+    <main class="mt-5 pt-5 container">
+        <section class="custom-container p-5 rounded-lg shadow mb-5 text-center">
+            <h2 class="font-bowlby text-custom-header mb-4">Frische, saisonale Gemüsekisten direkt zu Ihnen für 80e per Monat</h2>
+        </section>
+        <section class="custom-container p-5 rounded-lg shadow text-center mb-4">
+            <h2 class="font-bowlby text-custom-header mb-4">Unser Angebot</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="image-container">
+                        <img src="{{ url_for('static', filename='img/delivery.png') }}" class="img-fluid rounded" alt="Wöchentliche Lieferung">
+                        <h5 class="font-bowlby text-custom-header mb-4">Wöchentliche Lieferung</h5>
+                        <div class="tooltip">
+                            <p>Frische Gemüse direkt an Ihre Haustür geliefert – jede Woche neu und saisonal.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="image-container">
+                        <img src="{{ url_for('static', filename='img/seasonal.png') }}" class="img-fluid rounded" alt="Saisonale Vielfalt">
+                        <h5 class="font-bowlby text-custom-header mb-4">Saisonale Vielfalt</h5>
+                        <div class="tooltip">
+                            <p>Jede Box enthält 6 bis 8 verschiedene Gemüse, je nach Saison abgestimmt.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="image-container">
+                        <img src="{{ url_for('static', filename='img/subscription.png') }}" class="img-fluid rounded" alt="Monatliches Abo">
+                        <h5 class="font-bowlby text-custom-header mb-4">Monatliches Abo</h5>
+                        <div class="tooltip">
+                            <p>Genießen Sie ein monatliches Abonnement für nur 80€ – bequem und nachhaltig.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="custom-container p-5 rounded-lg shadow mb-5 text-center">
+            <h2 class="font-bowlby text-custom-header mb-4">Über uns</h2>
+            <div class="container-text">
+                <p>Katari Farms präsentiert die Solawi-Kiste – unseren Abonnement-Service für frisches, saisonales Gemüse. Unser innovatives solidarisches Landwirtschaftsprojekt in Saarmund Nuthetal, unweit von Berlin, startet in die Saison 2025.</p>
+                <p>Ab Saisonbeginn liefern wir Ihnen wöchentlich eine Kiste mit 6 bis 8 sorgfältig ausgewählten Gemüsesorten, die sich je nach Jahreszeit verändern. Unser Ziel ist es, Ihnen nachhaltige und qualitativ hochwertige Produkte zu bieten, die Sie begeistern.</p>
+                <p>Kontaktieren Sie uns oder abonnieren Sie unseren Newsletter, um stets über aktuelle Neuigkeiten und Angebote informiert zu bleiben.</p>
+            </div>
+                
+        </section>
+        <section class="custom-container p-5 rounded-lg shadow mb-5 text-center">
+            <h2 class="font-bowlby text-custom-header mb-4">Kontakt</h2>
+
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert alert-{{ message[1] }}" role="alert">
+                            {{ message[0] }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            <form id="contactForm" action="/" method="POST">
+                <div class="form-group">
+                    <label for="name" class="text-custom">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="text-custom">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="topic" class="text-custom">Topic</label>
+                    <select class="form-control" id="topic" name="topic" required>
+                        <option value="Anfrage">Anfrage</option>
+                        <option value="Abo-Informationen">Abo-Informationen</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message" class="text-custom">Message</label>
+                    <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                </div>
+                
+                <!-- Add reCAPTCHA widget here -->
+                <div class="g-recaptcha" data-sitekey="6LdjxdoqAAAAAGX5NmTBKdYdqC1brQRUhqKis0UX"></div>
+            
+                <button type="submit" class="btn btn-primary btn-custom">Submit</button>
+            </form>
+            
+        </section>
+    </main>
+    <footer class="fixed-bottom bg-custom text-custom text-center p-3 shadow-lg">
+        <p>&copy; 2025 Katari Farms. Alle Rechte vorbehalten. Kietzerweg, 10365 Berlin.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tooltips = document.querySelectorAll('.image-container');
+    
+            tooltips.forEach(function(tooltip) {
+                tooltip.addEventListener('mouseover', function() {
+                    const tooltipBox = this.querySelector('.tooltip');
+                    if (tooltipBox) {
+                        tooltipBox.classList.add('tooltip-visible'); // Tooltip anzeigen
+                    }
+                });
+    
+                tooltip.addEventListener('mouseout', function() {
+                    const tooltipBox = this.querySelector('.tooltip');
+                    if (tooltipBox) {
+                        tooltipBox.classList.remove('tooltip-visible'); // Tooltip ausblenden
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
